@@ -55,7 +55,7 @@ describe("Visitor  can ", () => {
       cy.get("[data-cy=article-title]").first().click();
     });
 
-    it.only("is expected to ask the user to sign in", () => {
+    it("is expected to ask the user to sign in", () => {
       cy.get("#message-box").should(
         "contain.text",
         "Please login to view full articles"
