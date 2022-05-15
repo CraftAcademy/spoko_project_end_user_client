@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Authentication from "../modules/Authentication";
-import { Button, Container } from "semantic-ui-react";
+import { Button, Container, Form, Input } from "semantic-ui-react";
 import { toast } from "react-toastify";
 
 const Login = () => {
@@ -48,7 +48,7 @@ const Login = () => {
     },
   };
   const labelOptions = {
-    width: 100,
+    width: 300,
     margin: "8px 0",
     boxsizing: "border-box",
     padding: "12px 12px 12px 0",
@@ -56,54 +56,56 @@ const Login = () => {
     textalign: "right",
   };
 
+  // return (
+  //   <>
+  //     <Container>
+  //       <h3>Please fill out the form</h3>
+  //       <label style={labelOptions}>Email</label>
+  //       <input data-cy="email" options={options} />
+  //       <br />
+  //       <label style={labelOptions}>Password</label>
+  //       <input data-cy="password" options={options} />
+  //       <br />
+  //       <br />
+  //       <Button data-cy="submit" onClick={handleLogin}>
+  //         Submit
+  //       </Button>
+  //     </Container>
+  //     <br />
+  //   </>
+  // );
+
   return (
     <>
       <Container>
         <h3>Please fill out the form</h3>
-        <label style={labelOptions}>Email</label>
-        <input data-cy="email" options={options} />
-        <br />
-        <label style={labelOptions}>Password</label>
-        <input data-cy="password" options={options} />
-        <br />
-        <br />
-        <Button data-cy="submit" onClick={handleLogin}>
-          Submit
-        </Button>
+        <Form style={labelOptions} onSubmit={handleLogin}>
+          <Form.Field
+            
+            name="email"
+            data-cy="email"
+            placeholder="your@emails"
+            control={Input}
+            label="Email"
+          />
+          <Form.Field
+            name="password"
+            data-cy="password"
+            type="password"
+            control={Input}
+            label="Password"
+            placeholder="Password"
+          />
+          <Form.Field
+            data-cy="submit"
+            content="Login"
+            control={Button}
+            color="teal"
+          />
+        </Form>
       </Container>
-      <br />
     </>
   );
-
-  // return (
-  //   <>
-  //     <Container>
-  //       <Form onSubmit={handleLogin}>
-  //         <Form.Field
-  //           name="email"
-  //           data-cy="login-email"
-  //           placeholder="your@emails"
-  //           control={Input}
-  //           label="Email"
-  //         />
-  //         <Form.Field
-  //           name="password"
-  //           data-cy="login-password"
-  //           type="password"
-  //           control={Input}
-  //           label="Password"
-  //           placeholder="Password"
-  //         />
-  //         <Form.Field
-  //           data-cy="submit-button"
-  //           content="Login"
-  //           control={Button}
-  //           color="teal"
-  //         />
-  //       </Form>
-  //     </Container>
-  //   </>
-  // );
 };
 
 export default Login;

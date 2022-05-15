@@ -1859,7 +1859,7 @@
           "column": 14
         },
         "end": {
-          "line": 107,
+          "line": 109,
           "column": 1
         }
       },
@@ -2025,11 +2025,11 @@
       },
       "17": {
         "start": {
-          "line": 59,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 76,
+          "line": 108,
           "column": 4
         }
       }
@@ -2053,7 +2053,7 @@
             "column": 20
           },
           "end": {
-            "line": 107,
+            "line": 109,
             "column": 1
           }
         },
@@ -2212,7 +2212,7 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "499f55a1619fe845ea26b7444cc422a272bcfcc6"
+    "hash": "7ba5802b0a4ab555fc86a042548afb0df8148c9d"
   },
   "/media/shagufta/extension/craftAcademyDemos/spoko_project_end_user_client/src/Components/ReviewOrder.jsx": {
     "path": "/media/shagufta/extension/craftAcademyDemos/spoko_project_end_user_client/src/Components/ReviewOrder.jsx",
