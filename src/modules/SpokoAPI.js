@@ -9,6 +9,8 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   apiUrl = "https://spoko-app-again.herokuapp.com/api/articles";
 }
 
-const SpokoAPI = axios.create({ baseURL: apiUrl });
+const SpokoAPI = axios.create({
+  baseURL: apiUrl
+});
 
 export default SpokoAPI;

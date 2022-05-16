@@ -3,7 +3,7 @@ describe('user can see an app', () => {
     cy.intercept('GET', '**/api/articles', {
       fixture: 'articles.json',
     })
-    cy.visit('/',)
+    cy.visit('/', )
   })
 
   it('is expected to show app', () => {

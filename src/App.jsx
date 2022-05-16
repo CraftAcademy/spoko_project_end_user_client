@@ -1,14 +1,14 @@
-import React from 'react'
-import Navbar from './Components/Navbar.jsx'
-import HeaderImage from './Components/HeaderImage'
-import Articles from './Components/Articles'
-import Article from "./Components/Article.jsx"
-import ArticleCategory from './Components/ArticleCategory.jsx'
+import React from "react";
+import Navbar from "./Components/Navbar.jsx";
+import HeaderImage from "./Components/HeaderImage";
+import Articles from "./Components/Articles";
+import Article from "./Components/Article.jsx";
+import ArticleCategory from "./Components/ArticleCategory.jsx";
 import Login from "./Components/Login.jsx";
-import Products from './Components/Products'
-import { Routes, Route } from 'react-router-dom'
-import Footer from './Components/Footer.jsx'
-import { ToastContainer } from 'react-toastify'
+import Products from "./Components/Products";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer.jsx";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -28,6 +28,6 @@ const App = () => {
       <ToastContainer />
     </>
   );
-}
+};
 
-export default App
+export default App;

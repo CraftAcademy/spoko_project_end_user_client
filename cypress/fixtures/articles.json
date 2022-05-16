@@ -1,9 +1,8 @@
 {
   "articles": {
-    "football": [
-      {
+    "football": [{
         "id": 1,
-        "category":"Football",
+        "category": "Football",
         "title": "FiFa 2022 championship",
         "body": "consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrAaH6V5qnf4s7TXyLyPGpRsznRsO_UDedlhlvz7f2KLUz3_cR6hXGPWC3dC0q4Oc77eg&usqp=CAU"
@@ -23,8 +22,7 @@
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPP5i8K5LOSQzkOb_hyyHLRLVby9gj08wmtA&usqp=CAU"
       }
     ],
-    "golf": [
-      {
+    "golf": [{
         "id": 4,
         "category": "Golf",
         "title": "Furious'I  can't wait for this trip'",

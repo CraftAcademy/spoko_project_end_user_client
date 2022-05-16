@@ -6,7 +6,7 @@ const Footer = () => {
       <span className="name">
         SpokoSports -{" "}
         <a href="https://www.google.com" target="__blank">
-        Get Spoko Apps
+          Get Spoko Apps
         </a>
       </span>
       <hr style={{ width: "90%" }} />

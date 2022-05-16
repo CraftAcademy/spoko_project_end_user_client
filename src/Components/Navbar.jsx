@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
   const { userAuthenticated } = useSelector((state) => state);
   const navigate = useNavigate();
 

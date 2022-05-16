@@ -2,12 +2,14 @@
   border: 5px solid #FFFF00;
   text-align: right;
 }
+
 .content {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .newsCard {
   display: flex;
   width: 150%;
@@ -23,17 +25,19 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .newsImage {
   object-fit: cover;
   width: 320px;
   height: 268px;
 }
 
-.category{
+.category {
   font-size: 15px;
   line-height: 27px;
   font-family: "Roboto", sans-serif;
 }
+
 .title {
   font-size: 23px;
   line-height: 27px;

@@ -29,7 +29,7 @@ describe('Display products in order', () => {
         .within(() => {
           cy.contains('Jersey Shirt').should('be.visible')
         })
-    })
+      })
 
     it('is expected to include total cost', () => {
       cy.get('[data-cy=total-cost]').should('contain', '2600')
@@ -48,8 +48,7 @@ describe('Display products in order', () => {
     it('is expected to warn the user that there are no products in order', () => {
       cy.get('#message-box').should(
         'contain.text',
-        'There are no items in your order',
-      )
+        'There are no items in your order',)
     })
   })
 })
