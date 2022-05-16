@@ -6,7 +6,6 @@ import axios from "axios";
 import ReviewOrder from "./ReviewOrder";
 import ArticlesAPI from "../modules/ArticlesAPI";
 import store from "../state/store/configureStore";
-import { useSelector } from "react-redux";
 
 const Products = () => {
   const { products, order } = useSelector((state) => state);

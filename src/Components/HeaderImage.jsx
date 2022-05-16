@@ -4,7 +4,7 @@ import React from "react";
 export const HeaderImage = ({ title, subTitle }) => {
   return (
     <section>
-      <div
+      <div data-cy='spoko-logo'
         style={{
           backgroundImage: `url(${img})`,
           backgroundRepeat: "no-repeat",
