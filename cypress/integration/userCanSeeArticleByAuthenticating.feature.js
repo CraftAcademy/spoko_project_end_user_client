@@ -48,9 +48,9 @@ describe("visitor can see an single article by authenticating right away", () =>
       cy.get("[data-cy=article-title]").first().click();
     });
 
-    // it("is expected to redirect visitor to login screen", () => {
-    //   cy.url().should("eq", "http://localhost:3000/login");
-    // });
+    it("is expected to redirect visitor to login screen", () => {
+      cy.url().should("eq", "http://localhost:3000/login");
+    });
 
     it("is expected user to access full article after logging in", () => {
       cy.get("[data-cy=email]").type("user@email.com");

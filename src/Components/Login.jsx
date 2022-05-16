@@ -28,25 +28,7 @@ const Login = () => {
       activeArticle ? navigate(`/article/${activeArticle.id}`) : navigate("/");
     }
   };
-  const options = {
-    padding: "6px 10px",
-    margin: "10px 0px",
-    border: "1px solid lightgrey",
-    borderRadius: "3px",
-    width: "100%",
 
-    style: {
-      base: {
-        fontSize: "20px",
-        "::placeholder": {
-          color: "lightgrey",
-        },
-      },
-      invalid: {
-        backgroundColor: "lightgrey",
-      },
-    },
-  };
   const labelOptions = {
     width: 300,
     margin: "8px 0",
@@ -56,32 +38,12 @@ const Login = () => {
     textalign: "right",
   };
 
-  // return (
-  //   <>
-  //     <Container>
-  //       <h3>Please fill out the form</h3>
-  //       <label style={labelOptions}>Email</label>
-  //       <input data-cy="email" options={options} />
-  //       <br />
-  //       <label style={labelOptions}>Password</label>
-  //       <input data-cy="password" options={options} />
-  //       <br />
-  //       <br />
-  //       <Button data-cy="submit" onClick={handleLogin}>
-  //         Submit
-  //       </Button>
-  //     </Container>
-  //     <br />
-  //   </>
-  // );
-
   return (
     <>
       <Container>
         <h3>Please fill out the form</h3>
         <Form style={labelOptions} onSubmit={handleLogin}>
           <Form.Field
-            
             name="email"
             data-cy="email"
             placeholder="your@emails"
