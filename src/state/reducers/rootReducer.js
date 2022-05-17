@@ -10,6 +10,17 @@ const rootReducer = (state, action) => {
         ...state,
         activeArticle: action.payload,
       };
+    case "SET_PRODUCTS":
+      return {
+        ...state,
+        products: action.payload,
+      };
+    case "SET_USER_AUTHENTICATED":
+      return {
+        ...state,
+        userAuthenticated: action.payload,
+      };
+
     case "SET_ORDER":
       return {
         ...state,

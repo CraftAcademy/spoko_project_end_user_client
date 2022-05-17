@@ -47,7 +47,9 @@ const Articles = () => {
                       </div>
 
                       <div className="lowerNewsText">
-                        <div className="description">{article.body}</div>
+                        <div data-cy="article-body" className="description">
+                          {article.body}
+                        </div>
                         <span className="readmore">
                           read more <a target="__blank" className="source"></a>
                         </span>

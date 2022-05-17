@@ -7,6 +7,6 @@ describe('user can see an app', () => {
   })
 
   it('is expected to show app', () => {
-    cy.get('#name').should('contain.text', 'Spoko')
+    cy.get('[data-cy=spoko-logo]').should('be.visible')
   })
 })

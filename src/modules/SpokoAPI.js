@@ -6,7 +6,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   apiUrl = "http://localhost:3000/api";
 
 } else {
-  apiUrl = "https://spoko.herokuapp.com/api";
+  apiUrl = "https://spoko-app-again.herokuapp.com/api/articles";
 }
 
 const SpokoAPI = axios.create({

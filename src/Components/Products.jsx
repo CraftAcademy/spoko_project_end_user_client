@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Card, Item, Container, List } from "semantic-ui-react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import axios from "axios";
 import ReviewOrder from "./ReviewOrder";
+import ArticlesAPI from "../modules/ArticlesAPI";
 import store from "../state/store/configureStore";
-import { useSelector } from "react-redux";
 
 const Products = () => {
-  const { order } = useSelector((state) => state);
+  const { products, order } = useSelector((state) => state);
   const { dispatch } = store;
-  const [products, setProducts] = useState([]);
 
-  const fetchProducts = async () => {
-    const response = await axios.get("https:reqres.in/api/products");
-    setProducts(response.data.products);
+  const displayProducts = (products) => {
+    let productsArray = [];
+    Object.entries(products).map((category) => {
+      productsArray.push(category[1]);
+    });
+    return productsArray.flat();
   };
 
   useEffect(() => {
-    fetchProducts();
+    ArticlesAPI.fetchProducts();
   }, []);
 
   const addToOrder = async (id) => {
@@ -37,7 +40,7 @@ const Products = () => {
     }
   };
 
-  const productlist = products.map((product) => {
+  const productlist = displayProducts(products).map((product) => {
     return (
       <Card key={product.id}>
         <Item.Content>
@@ -63,14 +66,21 @@ const Products = () => {
   });
   return (
     <>
+      <div
+        style={{
+          position: "absolute",
+          left: 30,
+        }}
+      >
+        <ReviewOrder />
+      </div>
+      <br />
       <Container>
-        <h1 data-cy="name">Spoko</h1>
+        <br />
         <List inverted data-cy="products-list" size="big">
           {productlist}
         </List>
       </Container>
-      <ToastContainer />
-      <ReviewOrder />
     </>
   );
 };
